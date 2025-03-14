@@ -1,6 +1,7 @@
 package br.dev.viniciusbarbosa.questlab.modules.user;
 
 import lombok.*;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 import java.time.Instant;
@@ -11,6 +12,7 @@ interface UserRepository extends JpaRepository<UserEntity, Integer> {}
 @Service
 @RequiredArgsConstructor
 class UserService {
+
     private final UserRepository userRepository;
     
     public List<UserEntity> findAll() {
