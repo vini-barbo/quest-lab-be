@@ -1,4 +1,4 @@
-package br.com.viniciusbarbosa.questlab;
+package br.dev.viniciusbarbosa.questlab;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

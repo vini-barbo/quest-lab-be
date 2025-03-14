@@ -11,6 +11,22 @@ services:
     volumes:
       - postgres-data:/var/lib/postgresql/data
 
+  # questlab-be:
+  #   build: .
+  #   container_name: questlab-be
+  #   env_file:
+  #     - .env
+  #   ports:
+  #     - "8080:8080"
+  #   depends_on:
+  #     - questlab-db
+  #   networks:
+  #     - backend-network
+  #   volumes:
+  #     - .:/app
+  #   command: ["mvn", "spring-boot:run"]
+  #   restart: always
+
 networks:
   backend-network:
     driver: bridge
