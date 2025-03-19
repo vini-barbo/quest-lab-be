@@ -12,8 +12,13 @@ services:
     networks:
       - backend-network
     volumes:
+      - ./:/app
+      - ~/.m2:/root/.m2
       - ./src/main/resources/application.properties:/app/resources/application.properties
-    restart: always
+    restart: unless-stopped
+    environment:
+      - JAVA_OPTS=-Dspring.devtools.restart.enabled=true -Dspring.devtools.livereload.enabled=true
+      - SPRING_PROFILES_ACTIVE=dev
     depends_on:
       db:
         condition: service_healthy
