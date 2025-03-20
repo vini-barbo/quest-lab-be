@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: questlab
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/projeto
+    username: postgres
+    password: sua_senha
+    driver-class-name: org.postgresql.Driver
+
+  profiles:
+    active: dev
+  devtools:
+    livereload:
+      enabled: true
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
