@@ -9,9 +9,6 @@ import java.time.Instant;
 @Data
 public class UserDTO {
 
-    @NotNull(message = "ID cannot be null")
-    private Integer id;
-
     @NotBlank(message = "Name cannot be blank")
     @Size(min = 3, max = 100, message = "Name must be between 3 and 100 characters")
     private String name;

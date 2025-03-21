@@ -31,8 +31,6 @@ public class UserEntity {
 
     @Column(nullable = false, unique = true)
     @NotBlank(message = "Email cannot be blank")
-    @Email(message = "Email should be valid")
-    @Size(max = 255, message = "Email cannot be longer than 255 characters")
     private String email;
 
     @Enumerated(EnumType.STRING)

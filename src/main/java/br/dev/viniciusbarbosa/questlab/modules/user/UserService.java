@@ -29,7 +29,7 @@ class UserService {
         UserEntity userToCreate = new UserEntity();
 
         userToCreate.setName(userDto.getName());
-        userToCreate.setEmail(userDto.getPassword());
+        userToCreate.setEmail(userDto.getEmail());
         userToCreate.setPassword(userDto.getPassword());
         userToCreate.setRole(userDto.getRole());
         userToCreate.onCreate();
